@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">All About Sheets</string>
+    <string name="title_one" translatable="false">One</string>
+    <string name="title_two">Two</string>
+    <string name="title_three">Three</string>
+    <string name="title_four">Four</string>
+
+</resources>
