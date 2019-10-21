@@ -3,13 +3,189 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home" />
+   <android.support.v4.widget.NestedScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical">
+
+       <android.support.design.card.MaterialCardView
+           android:id="@+id/create_card"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="8dp"
+           android:layout_marginTop="8dp"
+           android:layout_marginEnd="8dp"
+           android:layout_marginBottom="8dp"
+           android:visibility="visible"
+           android:clickable="true"
+           android:focusable="true"
+           android:paddingTop="16dp"
+           android:paddingBottom="16dp"
+           app:cardCornerRadius="8dp">
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="match_parent"
+               android:foreground="?android:attr/selectableItemBackground"
+               android:layout_height="wrap_content">
+
+               <com.allabout.sheets.allaboutsheets.CustomViews.SheetTriangle
+                   android:id="@+id/sheetTriangle"
+                   android:layout_width="250dp"
+                   android:layout_height="250dp"
+                   android:layout_marginStart="16dp"
+                   android:layout_marginTop="24dp"
+                   android:layout_marginEnd="16dp"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:id="@+id/textView2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="16dp"
+                   android:layout_marginBottom="8dp"
+                   android:text="Get your sheets done !"
+                   android:textColor="#999"
+                   android:textSize="18sp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toBottomOf="@+id/sheetTriangle" />
+
+           </android.support.constraint.ConstraintLayout>
+
+       </android.support.design.card.MaterialCardView>
+
+       <android.support.design.card.MaterialCardView
+           android:id="@+id/_card"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="8dp"
+           android:layout_marginEnd="8dp"
+           android:layout_marginBottom="8dp"
+           android:visibility="visible"
+           android:clickable="true"
+           android:focusable="true"
+           android:paddingTop="16dp"
+           android:paddingBottom="16dp"
+           app:cardCornerRadius="8dp">
+
+           <android.support.constraint.ConstraintLayout
+               android:layout_width="match_parent"
+               android:foreground="?android:attr/selectableItemBackground"
+               android:layout_height="wrap_content">
+
+               <com.allabout.sheets.allaboutsheets.CustomViews.SheetCircle
+                   android:id="@+id/sheetCircle"
+                   android:layout_width="150dp"
+                   android:layout_height="150dp"
+                   android:layout_marginStart="24dp"
+                   android:layout_marginTop="16dp"
+                   android:layout_marginBottom="16dp"
+                   app:layout_constraintBottom_toBottomOf="parent"
+                   app:layout_constraintStart_toStartOf="parent"
+                   app:layout_constraintTop_toTopOf="parent" />
+
+               <TextView
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_marginStart="8dp"
+                   android:gravity="center"
+                   android:layout_marginEnd="8dp"
+                   android:text="We build your sheets with great accuracy and neatness, keeping in mind about your level."
+                   android:textColor="#999"
+                   android:textSize="14sp"
+                   app:layout_constraintBottom_toBottomOf="@+id/sheetCircle"
+                   app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toEndOf="@+id/sheetCircle"
+                   app:layout_constraintTop_toTopOf="@+id/sheetCircle" />
+
+           </android.support.constraint.ConstraintLayout>
+
+       </android.support.design.card.MaterialCardView>
+
+           <android.support.design.card.MaterialCardView
+               android:id="@+id/_ocard"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="8dp"
+               android:layout_marginEnd="8dp"
+               android:layout_marginBottom="8dp"
+               android:visibility="visible"
+               android:clickable="true"
+               android:focusable="true"
+               android:paddingTop="16dp"
+               android:paddingBottom="16dp"
+               app:cardCornerRadius="8dp">
+
+               <android.support.constraint.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:foreground="?android:attr/selectableItemBackground"
+                   android:layout_height="wrap_content">
+
+
+                   <com.allabout.sheets.allaboutsheets.CustomViews.SheetSquare
+                       android:id="@+id/sheetSquare"
+                       android:layout_width="150dp"
+                       android:layout_height="150dp"
+                       android:layout_marginTop="16dp"
+                       android:layout_marginEnd="24dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <TextView
+                       android:layout_width="0dp"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="8dp"
+                       android:gravity="center"
+                       android:layout_marginEnd="8dp"
+                       android:text="Get your sheets done at a lightning speed, as same day delivery is also possible."
+                       android:textColor="#999"
+                       android:textSize="14sp"
+                       app:layout_constraintBottom_toBottomOf="@+id/sheetSquare"
+                       app:layout_constraintEnd_toStartOf="@+id/sheetSquare"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="@+id/sheetSquare" />
+
+                   <ImageView
+                       android:layout_width="48dp"
+                       android:layout_height="48dp"
+                       android:src="@drawable/ic_home"
+                       app:layout_constraintBottom_toBottomOf="@+id/order"
+                       app:layout_constraintEnd_toStartOf="@+id/order"
+                       app:layout_constraintTop_toTopOf="@+id/order" />
+
+                   <Button
+                       android:id="@+id/order"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginStart="24dp"
+                       android:layout_marginTop="24dp"
+                       android:layout_marginBottom="24dp"
+                       android:background="@drawable/button_effect"
+                       android:paddingStart="16dp"
+                       android:paddingEnd="16dp"
+                       android:text="Order Sheet"
+                       android:textColor="@android:color/white"
+                       app:layout_constraintBottom_toBottomOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/sheetSquare" />
+               </android.support.constraint.ConstraintLayout>
+
+           </android.support.design.card.MaterialCardView>
+
+       </LinearLayout>
+
+   </android.support.v4.widget.NestedScrollView>
 
 </FrameLayout>
